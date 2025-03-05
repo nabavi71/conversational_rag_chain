@@ -1,0 +1,26 @@
+
+
+services:
+
+  fastapp_service:
+    image: langchain_chatbot:latest
+    container_name: langchain_chatbot
+    restart: always
+    build:
+      context: api_service
+    ports:
+      - 9001:8080
+    networks:
+      - default
+    env_file:
+      - ./api_service.env
+    volumes:
+      - ./api_service:/app
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+
+
+networks:
+  default:
+    name: langchain_chatBot-net
+    external: false
