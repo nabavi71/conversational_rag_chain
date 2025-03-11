@@ -106,7 +106,7 @@ Feel free to open issues or pull requests to improve this project!
 ---
 
 ## 📬 Contact
-For questions or support, reach out to **[Your Name]** via GitHub issues.
+For questions or support, reach out to **[nabavi71]** via GitHub issues.
 
 ---
 
