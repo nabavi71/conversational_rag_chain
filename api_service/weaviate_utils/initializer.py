@@ -9,4 +9,5 @@ weaviate_config = WeaviateConfig(
     weaviate_port = os.environ.get('WEAVIATE_PORT'),
     weaviate_api_key = os.environ.get('WEAVIATE_API_KEY'))
 
-client = WeaviateConnect(weaviate_config)
+weaviate_connect = WeaviateConnect(weaviate_config)
+client = weaviate_connect.connect()

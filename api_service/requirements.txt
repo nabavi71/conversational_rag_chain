@@ -2,7 +2,6 @@ requests
 fastapi
 uvicorn[standard]
 pydantic
-weaviate
 weaviate-client
 langchain-community
 langchain

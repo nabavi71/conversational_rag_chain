@@ -22,7 +22,7 @@ class ChatbotRAG:
 
     def weaviate_retriever(self):
 
-        vectorStore = Weaviate(client=self.client, index_name="ChatBot_test", text_key="content")
+        vectorStore = Weaviate(client=self.client, index_name="your_weaviate_index", text_key="your_text_key")
         vector_retriever = vectorStore.as_retriever(search_type="similarity",
                                                     search_kwargs={
                                                         "k": 10
