@@ -13,25 +13,23 @@ class WeaviateConnect:
 
     def connect(self):
 
-        if self.config.api_key:
-            auth_config = Auth.api_key(self.config.api_key)
+        if self.config.weaviate_api_key:
+            auth_config = Auth.api_key(self.config.weaviate_api_key)
         else:
             auth_config = None
 
         try:
 
-            self.client = weaviate.connect_to_local(
-                host= self.config.host,
-                port= self.config.port,
-                auth_credentials= auth_config)
+            self.client = weaviate.Client(
+                url=f"http://{self.config.weaviate_host}:{self.config.weaviate_port}",
+                auth_client_secret= auth_config)
 
-            print(f"connection to {self.config.host} successfully")
+            print(f"connection to {self.config.weaviate_host} successfully")
             return self.client
 
         except:
             print(f"Weaviate Connection Failed:\n\n{format_exc()}")
 
-        return self.client
 
 
     def create_schema(self):

@@ -3,9 +3,9 @@ from typing import Union
 
 
 class WeaviateConfig(BaseModel):
-    weaviate_host: str = "192.168.13.198"
-    weaviate_port: Union[str, int] = "9191"
-    weaviate_api_key: str = "hfz-ai-TheBert2022"
+    weaviate_host: str = "your_weaviate_host"
+    weaviate_port: Union[str, int] = "your_weaviate_port"
+    weaviate_api_key: str = "your_weaviate_api_key"
 
 class LlmConfig(BaseModel):
     ollama_host: str
