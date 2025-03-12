@@ -22,12 +22,14 @@ cd conversational_rag_chain
 ### **2️⃣ Set Up Environment Variables**
 Create a `.env` file and configure:
 ```
-WEAVIATE_HOST=localhost
-WEAVIATE_PORT=8080
-OLLAMA_HOST=http://localhost
-OLLAMA_PORT=11434
-MODEL_NAME=mistral
-API_KEY=your_api_key  # If authentication is required
+WEAVIATE_HOST=YOUR WEAVIATE HOST
+WEAVIATE_PORT=YOUR WEAVIATE PORT
+WEAVIATE_API_KEY=YOUR WEAVIATE API KEY  # If authentication is required
+INDEX_NAME=YOUR WEAVIATE INDEX NAME
+TEXT_KEY=content
+OLLAMA_HOST=YOUR OLLAMA HOST
+OLLAMA_PORT=YOUR OLLAMA PORT
+MODEL_NAME=YOUR OLLAMA MODEL
 ```
 
 ### **3️⃣ Run Weaviate (if not running already)**
